@@ -44,9 +44,24 @@ let multiple_upto n r =
     | _ when n < 2 -> false
     | _ -> t 2
 
+(* gcd that takes two non-negative integers n and m, and 
+that returns the greatest common divisor of n and m, following Euclid's algorithm.
+*)
+let gcd n m =
+    let rec g a b =
+        let _min = min a b
+        let _max = max a b
+        let _r = _max mod _min
+        in 
+            if _r = 0 then _min else g _min _r
+    g n m
+
+
+
 
 [<EntryPoint>]
 let main argv =
-    let res = multiple_upto 77 7
+    let res = gcd 5 1975
+
     printfn "%A" argv
     0 // return an integer exit code
