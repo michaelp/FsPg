@@ -61,7 +61,8 @@ let gcd n m =
 
 [<EntryPoint>]
 let main argv =
-    let res = gcd 5 1975
+    let res =  w2.find (99,10)
+    let isOk = w2.is_valid_answer res
 
     printfn "%A" argv
     0 // return an integer exit code
