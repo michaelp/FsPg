@@ -57,6 +57,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="W2Strings.fs" />
     <Compile Include="W2Arrays.fs" />
+    <Compile Include="W2RecordsShadokus.fs" />
     <Compile Include="W2Records.fs" />
     <Compile Include="tetragon.fs" />
     <Compile Include="w2.fs" />
