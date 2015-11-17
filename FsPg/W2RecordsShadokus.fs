@@ -99,8 +99,10 @@ let of_int:int->date = fun i ->
     let def = { year = 1; month = 1; day = 1; hour = 0; minute = 0 } in
     {def with 
         year   = 1 + (i / minInYear);
-        month  = 1 + (i / minInMonth) mod 6 ;
-        day    = 1 + (i / minInDays) mod 5
+        month  = 1 + (i / minInMonth) mod 5 ;
+        day    = 1 + (i / minInDays) mod 4
         hour   = (i / minInHour) mod 3 ; 
-        minute = i%2}
+        minute = i mod 2
+    }
+
 
