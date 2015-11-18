@@ -26,5 +26,21 @@ Write a function next : index -> index such that next (Index k) is equal to Inde
 Consider a non empty array of integers a, 
 write a function min_index : int array -> index that returns the index of the minimal element of a.
 *)
-let min_index : int array -> int = fun xs ->
-    
+type index = Index of int
+
+let read : int array -> index -> int = fun arr (Index m) -> 
+    Array.get arr m
+(*inside : int array -> index -> bool such that inside a idx is true 
+if and only if idx is a valid index for the array a.
+*)
+let inside : int array -> index -> bool = fun arr (Index i)->
+    i >= 0 && i< Array.length arr
+            
+(*next (Index k) is equal to Index (k + 1) *)
+let next (Index k) = Index (k + 1)
+
+(*Consider a non empty array of integers a, 
+write a function min_index : int array -> index that returns the index of the minimal element of a.*)
+let min_index : int array -> index = fun arr ->
+    let (_,res,_) = Array.fold_left (fun (m,m_idx,i_idx) i -> if i < m then (i,i_idx,i_idx + 1) else (m,m_idx, i_idx + 1)) ((Array.get arr 0),0,0) arr
+    in (Index res)
