@@ -55,6 +55,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="W3OptionTypes.fs" />
     <Compile Include="W3TaggedValue.fs" />
     <Compile Include="W2Strings.fs" />
     <Compile Include="W2Arrays.fs" />
