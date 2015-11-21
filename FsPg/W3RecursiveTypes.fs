@@ -34,7 +34,7 @@ let combine : int list -> int list -> (int * int) list = fun zs ws ->
         | (x::xxs, y::yys) -> f xxs yys ((x,y)::res)
         | _ -> res
     in
-     let rec rev xs rs =
+    let rec rev xs rs =
         match xs with 
         | [] -> rs
         | b::bs -> rev bs (b::rs)
