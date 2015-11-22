@@ -57,11 +57,14 @@ let gcd n m =
     g n m
 
 
-
+open W3Tries
 
 [<EntryPoint>]
 let main argv =
-    let res =  W2Strings.find  [|"d"; "e"; "f"; "g"; "h"; "i"; "j"; "k"|] "f"
+    let res = 
+        lookup (Trie (Some 1,
+                        [('a', Trie (None, [('s', Trie (None, [('s', Trie (Some (-3), []))]))]));
+                         ('j', Trie (Some (-4), [('s', Trie (None, [('j', Trie (Some 4, []))]))]))])) "j"
     
 
     printfn "%A" argv
