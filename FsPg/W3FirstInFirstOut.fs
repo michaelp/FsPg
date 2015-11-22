@@ -20,4 +20,22 @@ let is_empty : queue -> bool = fun (front,back)->
     | _ -> false
     
 let enqueue x (front, back) =
-  (x::front,back)
+  (front,x::back)
+
+let dequeue: queue -> int * queue = fun (front,back) ->
+    match front with 
+    | x::xs -> (x,(xs,back))
+    | [] ->
+        let rev_back = List.rev back in
+        (List.hd rev_back, (List.tl rev_back,[]))
+
+//such that split l = (front, back) where l = back @ List.rev front and the length of back and front is List.length l / 2 or List.length l / 2 + 1
+let split : int list -> int list * int list = function
+    | [] -> ([],[])
+    | l  -> 
+        let front_size = List.length l / 2 in
+        let rec take x src (front,back) =
+            if x <= 0 then (front,src) else take (x-1) (List.tl src) ( (List.hd src) :: front, [] )
+        in 
+        let (a,b) = take front_size l ([],[]) in
+        (List.rev b,List.rev a)
