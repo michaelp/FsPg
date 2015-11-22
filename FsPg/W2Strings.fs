@@ -1,5 +1,5 @@
 ﻿module W2Strings
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 //open FSharp.Compatibility.OCaml.Array
 //open FSharp.Compatibility.OCaml.String

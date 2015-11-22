@@ -10,7 +10,7 @@ Write a function split : int list -> int list * int list such that split l = (fr
 Write a function dequeue : queue -> int * queue such that dequeue q = (x, q') where x is the front element of the queue q and q' corresponds to remaining elements. This function assumes that q is non empty.
 
 *)
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 
 type queue = int list * int list

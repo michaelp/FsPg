@@ -1,5 +1,5 @@
 ﻿module W3RecursiveTypes
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 (*
 Write a function mem : int -> int list -> bool such that mem x l is true if and only if x occurs in l.

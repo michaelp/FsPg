@@ -1,5 +1,5 @@
 ﻿module W2Arrays
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml.Array
 (*
 min : int array -> int that returns the minimal element of a.

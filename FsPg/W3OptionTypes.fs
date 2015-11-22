@@ -15,7 +15,7 @@ merge None None = None
 merge (Some x) None = merge None (Some x) = Some x
 merge (Some x) (Some y) = Some (x + y)
 *)
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 
 //such that find a w = Some idx if a.(idx) = w 

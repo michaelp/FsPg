@@ -1,5 +1,5 @@
 ﻿module W2RecordsShadokus
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 (*
 On planet Shadokus, a year has 5 months, each month has 4 days, 

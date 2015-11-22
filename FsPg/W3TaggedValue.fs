@@ -1,5 +1,5 @@
 ﻿module W3TaggedValue
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 (*
 The previous week, we asked you the following question: 

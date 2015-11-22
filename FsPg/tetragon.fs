@@ -1,5 +1,5 @@
 ﻿module w2tetra
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 open FSharp.Compatibility.OCaml.List
 

@@ -1,5 +1,5 @@
 ﻿module W2Records
-#nowarn "62"
+
 open FSharp.Compatibility.OCaml
 
 type point  = { x : float; y : float; z : float }
