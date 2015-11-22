@@ -57,14 +57,14 @@ let gcd n m =
     g n m
 
 
-open W3Tries
+open W3BalancedTree
+
 
 [<EntryPoint>]
 let main argv =
-    let res = 
-        lookup (Trie (Some 1,
-                        [('a', Trie (None, [('s', Trie (None, [('s', Trie (Some (-3), []))]))]));
-                         ('j', Trie (Some (-4), [('s', Trie (None, [('j', Trie (Some 4, []))]))]))])) "j"
+    let one = Node(Empty,0,Empty)
+    let res = height (Node(one,0,one))
+       
     
 
     printfn "%A" argv

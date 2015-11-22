@@ -1,4 +1,5 @@
 ﻿module W3Tries
+open FSharp.Compatibility.OCaml
 
     
 
