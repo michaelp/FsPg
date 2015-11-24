@@ -58,6 +58,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="W4Foo.fs" />
     <Compile Include="W3StoryTeller.fs" />
     <Compile Include="W3ListConcatenation.fs" />
     <Compile Include="W3BalancedTree.fs" />
