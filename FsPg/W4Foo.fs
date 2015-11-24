@@ -24,5 +24,23 @@ let fixedpoint : (float -> float) -> float -> float -> float = fun f start delta
         let d = if y' < y then y - y' else y' - y in 
         if d < delta then y else run y
     in run start
+
+let rec equal_on_common2 l1 l2 = match l1,l2 with
+  | [],_ -> true
+  | _,[] -> true
+  | h1::r1,h2::r2 -> h1=h2 && equal_on_common2 r1 r2
+
+let rec equal_on_common: 'a list-> 'a list -> bool = 
+  function 
+    [] -> fun _ -> true
+    | h1::r1 -> 
+        function 
+        [] -> true
+        | h2::r2 when h1 <> h2-> false
+        | h2::r2 -> equal_on_common r1 r2 
+
+//  in
+//    let ddd = f1 l1 in
+//    ddd l1 l2
     
     
